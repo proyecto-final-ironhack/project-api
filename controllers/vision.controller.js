@@ -11,5 +11,6 @@ visionService.getLabel(photo)
 }
 
 module.exports.imageUpload = (req, res, next) => {
+    
     res.json({ secure_url: req.file.secure_url });
 }
