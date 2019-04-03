@@ -4,7 +4,7 @@ const LocalStrategy = require('passport-local').Strategy;
 
 
 passport.serializeUser((user, next) => {
-  next(null, unnLpr.id);
+  next(null, user.id);
 });
 
 passport.deserializeUser((id, next) => {

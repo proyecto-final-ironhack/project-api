@@ -15,6 +15,7 @@ const cors = require('./configs/cors.config');
 
 const authRouter = require('./routes/auth.routes');
 const usersRouter = require('./routes/users.routes');
+const visionRouter = require('./routes/vision.routes');
 
 const app = express();
 
@@ -29,11 +30,13 @@ app.use(passport.session());
 
 app.use('/', authRouter);
 app.use('/users', usersRouter);
+app.use('/images', visionRouter);
 
 // 404
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
 
 // error handler
 app.use(function (error, req, res, next) {
