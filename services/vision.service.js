@@ -5,7 +5,7 @@ const vision = require('@google-cloud/vision');
 const client = new vision.ImageAnnotatorClient();
 
 module.exports.getLabel = (photo) => {  
-    return axios.post('https://vision.googleapis.com/v1/images:annotate?key=GOOGLEAPIKEY', {
+    return axios.post('https://vision.googleapis.com/v1/images:annotate?key=APIKEY', {
         requests: [
             {
                 image: {
