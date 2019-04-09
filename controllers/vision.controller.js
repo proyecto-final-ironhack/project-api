@@ -5,7 +5,7 @@ module.exports.imageRecognition = (req, res, next) => {
     visionService.getLabel(photo)
         .then((annotation) => {
             res.json({
-                "It is": annotation.description
+                description: annotation.description
             });
         })
         .catch(next);
