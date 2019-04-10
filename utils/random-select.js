@@ -7,3 +7,4 @@ module.exports.getRandomLabels = (labelsArray) => {
     // hacer funcion que elija X numero de items del array de manera aleatoria
     return randomLabelsArray
 }
+
